@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/don-hang")
-@CrossOrigin("https://long23112002.github.io")
+@CrossOrigin("*")
 public class DonHangController {
     @Autowired
     private DonHangService donHangService;

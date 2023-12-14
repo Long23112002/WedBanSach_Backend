@@ -25,7 +25,7 @@ public class MethodRestConfig implements RepositoryRestConfigurer {
 
         // CORS configuration
         cors.addMapping("/**")
-                .allowedOrigins(url)
+                .allowedOrigins("*")
                 .allowedMethods("GET", "POST", "PUT", "DELETE");
 
 

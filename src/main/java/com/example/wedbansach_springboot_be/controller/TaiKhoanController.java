@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-@CrossOrigin("https://long23112002.github.io")
+@CrossOrigin("*")
 @RequestMapping("/tai-khoan")
 public class TaiKhoanController {
 
