@@ -17,9 +17,10 @@ public class NguoiDung {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ma_nguoi_dung")
     private int maNguoiDung;
-    @Column(name = "ho_dem" , columnDefinition = "NVARCHAR(256)" )
+    @Nationalized
+    @Column(name = "ho_dem" )
     private String hoDem;
-    @Column(name = "ten" , columnDefinition = "NVARCHAR(256)" )
+    @Column(name = "ten" )
     @Nationalized
     private String ten;
     @Column(name = "ten_dang_nhap")
@@ -35,7 +36,7 @@ public class NguoiDung {
     @Column(name = "dia_chi_mua_hang")
     private String diaChiMuaHang;
     @Nationalized
-    @Column(name = "dia_chi_giao_hang" , columnDefinition = "NVARCHAR(255)")
+    @Column(name = "dia_chi_giao_hang" )
     private String diaChiGiaoHang;
     @Column(name = "da_kich_hoat")
     private boolean daKichHoat;

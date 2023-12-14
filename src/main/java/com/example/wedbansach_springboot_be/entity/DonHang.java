@@ -2,6 +2,7 @@ package com.example.wedbansach_springboot_be.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.Nationalized;
 import org.hibernate.annotations.Type;
 
 import java.sql.Date;
@@ -17,9 +18,11 @@ public class DonHang {
 
     @Column(name = "ngay_tao")
     private Date ngayTao;
-    @Column(name = "dia_chi_mua_hang", length = 512 , columnDefinition = "NVARCHAR(512)")
+    @Column(name = "dia_chi_mua_hang", length = 512)
+    @Nationalized
     private String diaChiMuaHang;
-    @Column(name = "dia_chi_nhan_hang", length = 512 , columnDefinition = "NVARCHAR(512)")
+    @Column(name = "dia_chi_nhan_hang", length = 512)
+    @Nationalized
     private String diaChiNhanHang;
     @Column(name = "tong_tien_san_pham")
     private double tongTienSanPham;

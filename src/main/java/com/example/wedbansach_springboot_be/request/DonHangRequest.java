@@ -15,8 +15,6 @@ public class DonHangRequest {
 
     private  Double chiPhiThanhToan;
 
-    private String diaChiMuaHang;
-
     private String diaChiNhanHang;
 
     private Double tongTien;

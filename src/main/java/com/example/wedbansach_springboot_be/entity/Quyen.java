@@ -2,6 +2,7 @@ package com.example.wedbansach_springboot_be.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.Nationalized;
 
 import java.util.Set;
 
@@ -17,7 +18,8 @@ public class Quyen {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ma_quyen")
     private int maQuyen;
-    @Column(name = "ten_quyen", columnDefinition = "NVARCHAR(256)")
+    @Nationalized
+    @Column(name = "ten_quyen")
     private String tenQuyen;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = {

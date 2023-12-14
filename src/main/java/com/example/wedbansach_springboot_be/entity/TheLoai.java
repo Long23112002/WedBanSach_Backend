@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.Nationalized;
 
 import java.util.List;
 
@@ -16,7 +17,8 @@ public class TheLoai {
     @Column(name="ma_the_loai")
     private int maTheLoai;
 
-    @Column(name = "ten_the_loai", length = 256 , columnDefinition = "NVARCHAR(256)")
+    @Column(name = "ten_the_loai", length = 256)
+    @Nationalized
     private String tenTheLoai;
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = {

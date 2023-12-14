@@ -2,6 +2,7 @@ package com.example.wedbansach_springboot_be.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.Nationalized;
 
 @Entity
 @Data
@@ -15,7 +16,8 @@ public class SuDanhGia {
     @Column(name = "diem_xep_hang")
     private float diemXepHang;
 
-    @Column(name = "nhan_xet" ,columnDefinition = "NVARCHAR(MAX)")
+    @Column(name = "nhan_xet")
+    @Nationalized
     private String nhanXet;
 
     @ManyToOne(cascade = {

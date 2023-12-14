@@ -49,7 +49,6 @@ public class DonHangImpl implements DonHangService {
         DonHang donHang1 = new DonHang();
         donHang1.setChiPhiGiaoHang(donHang.getChiPhiGiaoHang());
         donHang1.setChiPhiThanhToan(donHang.getChiPhiThanhToan());
-        donHang1.setDiaChiMuaHang(donHang.getDiaChiMuaHang());
         donHang1.setDiaChiNhanHang(donHang.getDiaChiNhanHang());
         donHang1.setNgayTao(new Date(System.currentTimeMillis()));
         donHang1.setTongTien(donHang.getTongTien());

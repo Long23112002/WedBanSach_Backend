@@ -2,6 +2,8 @@ package com.example.wedbansach_springboot_be.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.Nationalized;
+
 import java.util.List;
 @Entity
 @Data
@@ -12,16 +14,17 @@ public class Sach {
     @Column(name = "ma_sach")
     private int maSach;
 
-    @Column(name = "ten_sach", length = 256 , columnDefinition = "NVARCHAR(256)")
+    @Column(name = "ten_sach", length = 256)
+    @Nationalized
     private String tenSach;
 
-    @Column(name = "ten_tac_gia", length = 512 , columnDefinition = "NVARCHAR(512)")
+    @Column(name = "ten_tac_gia", length = 512)
     private String tenTacGia;
 
     @Column(name = "isbn", length = 256)
     private String ISBN;
-
-    @Column(name = "mo_ta", columnDefinition = "NVARCHAR(MAX)" )
+    @Nationalized
+    @Column(name = "mo_ta" )
     private String moTa;
 
     @Column(name="gia_niem_yet")

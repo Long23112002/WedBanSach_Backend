@@ -2,6 +2,7 @@ package com.example.wedbansach_springboot_be.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.Nationalized;
 
 import java.util.List;
 @Entity
@@ -12,7 +13,8 @@ public class HinhThucThanhToan {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ma_hinh_thuc_thanh_toan")
     private int maHinhThucGiaoHang;
-    @Column(name = "ten_hinh_thuc_thanh_toan" , columnDefinition = "NVARCHAR(256)")
+    @Nationalized
+    @Column(name = "ten_hinh_thuc_thanh_toan" )
     private String tenHinhThucGiaoHang;
     @Column(name = "mo_ta",columnDefinition = "NVARCHAR(MAX)")
     private String moTa;
